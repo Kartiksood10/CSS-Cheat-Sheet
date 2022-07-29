@@ -1,0 +1,233 @@
+body{
+
+	background-color: #f4f4f4; /*hexadecimal color values*/
+	color: darkred;
+
+	font-family: Arial, Helvetica,sans-serif;
+	font-size: 16px;
+	font-weight: normal;
+
+	/*Shorter way to define font*/
+
+	font: normal 16px Arial, Helvetica,sans-serif;
+
+	line-height: 1.6em; /*line gap is increased*/
+
+	margin: 0;
+
+
+}
+
+/*This will apply to all links present on the webpage */
+
+a{
+	text-decoration: none; /*removes the default underline on links*/
+	color: #000;
+}
+
+a:hover{ /*color that comes when you hover over a link*/
+
+	color: red;
+}
+
+a:active{ /*Flashes a green color when link is clicked*/
+
+	color: green;
+}
+
+a:visited{ /*color after clicking the link once*/
+
+	/*color: black;*/
+}
+
+/*classes from html are called using a dot*/
+
+.container{ /*Applied on entire body*/
+
+	width: 80%; /*Generally keep in % for better responsiveness*/
+	margin: auto; /*pushes to center with equal margin on both sides*/
+}
+
+.button{
+
+	background-color: #333;
+	color: #fff;
+	padding: 10px 15px;
+	border: none;
+}
+
+.button:hover{
+
+	background-color: orangered;
+	color: white;
+}
+
+.clr{  /*Done so that float done above does not effect future areas below*/
+
+	clear: both; 
+}
+
+.box-1{
+	background-color: #333;
+	color: #fff;
+
+	border-top: 5px red solid;
+	border-right: 5px red solid;
+	border-bottom: 5px red solid;
+	border-left: 5px red solid;
+
+	/*Shorter form to define border values*/
+	border: 5px red solid;
+
+	border-width: 3px;
+	border-bottom-width: 10px;
+	border-top-style: dotted;
+
+	border: 5px red solid;
+
+	padding: 20px; /*padding creates space between the content and the border*/
+	margin-top: 20px; /*Moves 20px down from top margin*/
+	margin: 20px 0; /*Move up and down by 20 and right left remains same*/
+
+}
+
+/*Applies to all h1 values present inside class box-1*/
+
+.box-1 h1{ 
+	font-family: Tahoma;
+	font-weight: 800;
+	font-style: italic;
+	text-decoration: underline;
+	text-transform: uppercase;
+	letter-spacing: 0.2em;
+	word-spacing: 0.3em;          
+}
+
+.box-2{
+	border: 3px dotted #ccc; /*we can mention type of border and color with the size*/
+	padding: 20px;
+	margin: 20px 0;
+}
+
+.categories{
+
+	border: 1px solid #ccc;
+	padding: 10px;
+	border-radius: 15px; /*Makes the border with curved edges*/
+}
+
+.categories h2{
+	text-align: center;
+}
+
+.categories ul{
+	padding: 0;
+	padding-left: 20px;
+	list-style: square;
+	list-style: none;
+}
+
+.categories li{
+	padding-bottom: 6px;
+	border-bottom: dotted 1px #333;
+	list-style-image: url('../images/checkmark.jpg'); /*Adding a custom image as a bullet point*/
+}
+
+.my-form{
+
+	padding: 20px;
+}
+
+.my-form .form-group{
+
+	padding-bottom: 15px;
+}
+
+.my-form label{ /*Labels are by default inline i.e they stay in the same line as our box we can convert them to block using display*/
+	display: block;
+}
+
+/*By adding [] we can apply the changes to specific types of input(button is also type input) and by comma we add same for textarea*/
+
+.my-form input[type="text"], .my-form textarea{
+
+	padding: 8px;
+	width: 100%;
+
+}
+
+.block{
+
+	float: left; /*floats all headings from below to side by side to one another*/
+	width: 33.33%;
+	border: 1px solid #ccc;
+	padding: 10px;
+	box-sizing: border-box; /*When we add border and padding the width increases and the headings dont remain in the same line*/
+							/*So we use box-sizing to nullify this issue*/
+}
+
+/*id are called using #, id are unique and can be used only on one element whereas class can be used on multiple elements*/
+
+#main-block{
+	float: left;
+	width: 70%;
+	padding: 15px;
+	box-sizing: border-box;
+}
+
+#sidebar{
+
+	float: right;
+	width: 30%;
+	background-color: #333;
+	color: #fff;
+	padding: 15px;
+	box-sizing: border-box;
+}
+
+.p-box{
+
+	width: 800px;
+	height: 500px;
+	border: 1px solid #000;
+	margin-top:30px ;
+	position: relative; /*if we dont add relative it changes position according to topmost margin in the webpage*/
+	background-image: url('../images/5543473.webp');
+	background-repeat: no-repeat;
+	background-position: center center;
+}
+
+.p-box h1{
+
+	position: absolute;
+	top: 100px; /*position relative keeps within box*/
+	left: 200px;
+}
+
+.p-box h2{
+
+	position: absolute;
+	bottom: 40px;
+	right: 100px;
+}
+
+.fix-me{
+
+	position: fixed; /*position of this button containing a link remains fixed wrt movement in webpage*/
+	top: 400px;
+}
+
+.my-list li:first-child{ /*pseudo class names like first-child can be used to aquire first list item*/
+
+	background-color: red;
+}
+
+.my-list li:last-child{ 
+
+	background-color: green;
+}
+
+.my-list li:nth-child(3){ /*pseudo class names like nth-child can be used to aquire particular(3rd) list item*/
+
+	background-color: yellow;
+}	
